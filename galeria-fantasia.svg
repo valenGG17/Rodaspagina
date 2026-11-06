@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<defs><linearGradient id="night" x2="0" y2="1"><stop stop-color="#17154b"/><stop offset="1" stop-color="#6b3b91"/></linearGradient></defs>
+<rect width="900" height="560" fill="url(#night)"/>
+<circle cx="700" cy="125" r="68" fill="#f5e6a8"/>
+<g fill="#fff"><circle cx="100" cy="90" r="4"/><circle cx="230" cy="145" r="3"/><circle cx="390" cy="80" r="4"/><circle cx="560" cy="65" r="3"/><circle cx="820" cy="220" r="4"/></g>
+<path d="M0 410L160 220 310 410 460 180 620 410 780 230 900 390V560H0Z" fill="#30245e"/>
+<path d="M0 465L190 330 340 470 520 300 700 475 850 340 900 390V560H0Z" fill="#211c4c"/>
+<path d="M390 560L450 350 510 560Z" fill="#a2d8b4"/>
+<path d="M435 430L450 360 465 430Z" fill="#f4e7ad"/>
+<g fill="#69b98b"><path d="M90 420L130 320 170 420Z"/><path d="M720 430L760 310 800 430Z"/></g>
+<text x="40" y="65" font-family="monospace" font-size="34" fill="#f4e7ad" font-weight="bold">FANTASY QUEST</text></svg>
