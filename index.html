@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda de Videojuegos - Matrix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =========================
+     MENÚ HAMBURGUESA
+========================== -->
+
+<nav class="navbar navbar-dark">
+    <div class="container-fluid">
+
+        <!-- Nombre -->
+        <a class="navbar-brand" href="#">
+            🎮 Mi Sitio
+        </a>
+
+        <!-- Botón hamburguesa -->
+        <button
+            class="navbar-toggler border-success"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Abrir menú">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenido del menú -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <!-- Inicio -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        Inicio
+                    </a>
+                </li>
+
+                <!-- Productos -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#productos">
+                        Productos
+                    </a>
+                </li>
+
+                <!-- Categorías -->
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Categorías
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Acción
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                RPG
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Shooter
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Simulación
+                            </a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#productos">
+                                Todos los juegos
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+
+            <!-- Buscador -->
+            <form class="d-flex" role="search">
+
+                <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Buscar"
+                    aria-label="Buscar">
+
+                <button
+                    class="btn btn-outline-success"
+                    type="submit">
+                    Buscar
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- =========================
+     CANVAS MATRIX
+========================== -->
+
+<canvas id="matrix"></canvas>
+
+
+<!-- =========================
+     TÍTULO
+========================== -->
+
+<h1>
+    Bienvenido a mi Tienda de Videojuegos Online
+</h1>
+
+
+<!-- =========================
+     CARRUSEL
+========================== -->
+
+<div
+    id="carouselMatrix"
+    class="carousel slide mx-auto mt-4"
+    data-bs-ride="carousel">
+
+    <!-- Indicadores -->
+
+    <div class="carousel-indicators">
+
+        <button
+            type="button"
+            data-bs-target="#carouselMatrix"
+            data-bs-slide-to="0"
+            class="active"
+            style="background-color: #0f0;">
+        </button>
+
+        <button
+            type="button"
+            data-bs-target="#carouselMatrix"
+            data-bs-slide-to="1"
+            style="background-color: #0f0;">
+        </button>
+
+        <button
+            type="button"
+            data-bs-target="#carouselMatrix"
+            data-bs-slide-to="2"
+            style="background-color: #0f0;">
+        </button>
+
+    </div>
+
+
+    <!-- Imágenes -->
+
+    <div
+        class="carousel-inner border border-success rounded-3 shadow"
+        style="background-color: rgba(0, 0, 0, 0.8);">
+
+        <div class="carousel-item active">
+
+            <img
+                src="https://i.guim.co.uk/img/media/c6f7b43fa821d06fe1ab4311e558686529931492/168_84_1060_636/master/1060.jpg?width=1200&quality=85&auto=format&fit=max&s=5c5b07b8cc96af633881fb903fb14a83"
+                class="d-block w-100"
+                alt="Slide 1">
+
+        </div>
+
+        <div class="carousel-item">
+
+            <img
+                src="https://static.india.com/wp-content/uploads/2019/11/Call-of-Duty-Mobile-Google-Play-Users-Choice-Game-of-2019.jpg"
+                class="d-block w-100"
+                alt="Slide 2">
+
+        </div>
+
+        <div class="carousel-item">
+
+            <img
+                src="https://media.gq-magazine.co.uk/photos/645b5c3c8223a5c3801b8b26/16:9/w_1280,c_limit/100-best-games-hp-b.jpg"
+                class="d-block w-100"
+                alt="Slide 3">
+
+        </div>
+
+    </div>
+
+
+    <!-- Botón anterior -->
+
+    <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselMatrix"
+        data-bs-slide="prev">
+
+        <span
+            class="carousel-control-prev-icon"
+            aria-hidden="true"
+            style="filter: brightness(0) saturate(100%) invert(68%) sepia(97%) saturate(5010%) hue-rotate(87deg) brightness(105%) contrast(112%);">
+        </span>
+
+        <span class="visually-hidden">
+            Anterior
+        </span>
+
+    </button>
+
+
+    <!-- Botón siguiente -->
+
+    <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselMatrix"
+        data-bs-slide="next">
+
+        <span
+            class="carousel-control-next-icon"
+            aria-hidden="true"
+            style="filter: brightness(0) saturate(100%) invert(68%) sepia(97%) saturate(5010%) hue-rotate(87deg) brightness(105%) contrast(112%);">
+        </span>
+
+        <span class="visually-hidden">
+            Siguiente
+        </span>
+
+    </button>
+
+</div>
+
+
+<!-- =========================
+     PRODUCTOS
+========================== -->
+
+
+<!-- =========================
+     GALERÍA DE VIDEOJUEGOS
+========================== -->
+<section class="galeria-section" aria-labelledby="tituloGaleria">
+    <h2 id="tituloGaleria">Galería de videojuegos</h2>
+    <p class="galeria-intro">Algunas imágenes del mundo de los videojuegos.</p>
+
+    <div class="galeria">
+        <img src="img/galeria-minecraft.svg"
+             alt="Paisaje de bloques inspirado en un videojuego de construcción">
+        <img src="img/galeria-accion.svg"
+             alt="Escena futurista inspirada en videojuegos de acción">
+        <img src="img/galeria-fantasia.svg"
+             alt="Paisaje fantástico inspirado en videojuegos de aventura">
+    </div>
+</section>
+
+<div class="products" id="productos">
+
+    <!-- Minecraft -->
+
+    <div class="product-card">
+
+        <img
+            src="https://cms-assets.xboxservices.com/assets/ec/78/ec78b957-42a4-441a-bdd2-8eb6e76f0d5b.jpg?n=Minecraft-Vanilla_Sneaky-Slider-1084_Summer_1600x675.jpg"
+            width="75%"
+            alt="Minecraft">
+
+        <h3>
+            Minecraft Premium
+        </h3>
+
+        <p>
+            Características: Aventura, multijugador
+        </p>
+
+        <p>
+            Precio: $59.99
+        </p>
+
+        <button
+            class="btn btn-success mt-2"
+            onclick="comprarJuego('Minecraft Premium', '59.99')">
+            Comprar
+        </button>
+
+    </div>
+
+
+    <!-- Far Cry 2 -->
+
+    <div class="product-card">
+
+        <img
+            src="https://cdn2.unrealengine.com/fc-fc2-store-landscape-2560x1440-2560x1440-ff6dea297bad.jpg"
+            width="75%"
+            alt="Farcry 2">
+
+        <h3>
+            Farcry 2
+        </h3>
+
+        <p>
+            Características: Estrategia, un jugador
+        </p>
+
+        <p>
+            Precio: $49.99
+        </p>
+
+        <button
+            class="btn btn-success mt-2"
+            onclick="comprarJuego('Farcry 2', '49.99')">
+            Comprar
+        </button>
+
+    </div>
+
+
+    <!-- World of Warcraft -->
+
+    <div class="product-card">
+
+        <img
+            src="https://blz-contentstack-images.akamaized.net/v3/assets/blt3452e3b114fab0cd/bltc204f2b89b02a47e/675366f579e7bb4086a76145/patch_notes.jpg"
+            width="75%"
+            alt="World of Warcraft">
+
+        <h3>
+            World of Warcraft
+        </h3>
+
+        <p>
+            Características: RPG, mundo abierto
+        </p>
+
+        <p>
+            Precio: $69.99
+        </p>
+
+        <button
+            class="btn btn-success mt-2"
+            onclick="comprarJuego('World of Warcraft', '69.99')">
+            Comprar
+        </button>
+
+    </div>
+
+
+    <!-- Call of Duty -->
+
+    <div class="product-card">
+
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVH5p2tyFi_gfd_9z7DiaqXRVZIhjTTIkBsw&s"
+            width="75%"
+            alt="Call of Duty Warzone">
+
+        <h3>
+            Call of Duty Warzone
+        </h3>
+
+        <p>
+            Características: Shooter, multijugador
+        </p>
+
+        <p>
+            Precio: $39.99
+        </p>
+
+        <button
+            class="btn btn-success mt-2"
+            onclick="comprarJuego('Call of Duty Warzone', '39.99')">
+            Comprar
+        </button>
+
+    </div>
+
+
+    <!-- Rat Simulator -->
+
+    <div class="product-card">
+
+        <img
+            src="https://pivigames.blog/wp-content/uploads/2017/05/Rat-Simulator-Free-Download.jpg"
+            width="75%"
+            alt="Rat Simulator">
+
+        <h3>
+            Rat Simulator
+        </h3>
+
+        <p>
+            Características: Simulación, un jugador
+        </p>
+
+        <p>
+            Precio: $29.99
+        </p>
+
+        <button
+            class="btn btn-success mt-2"
+            onclick="comprarJuego('Rat Simulator', '29.99')">
+            Comprar
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <p>
+        &copy; 2026 Tienda de Videojuegos.
+        Todos los derechos reservados a Valen el más capo.
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     MODAL DE COMPRA
+========================== -->
+
+<div
+    class="modal fade"
+    id="modalCompra"
+    tabindex="-1"
+    aria-labelledby="modalCompraLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content text-black">
+
+            <div class="modal-header">
+
+                <h5
+                    class="modal-title"
+                    id="modalCompraLabel">
+                    Comprar Juego
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar">
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <p id="juegoSeleccionado"></p>
+
+                <div class="mb-3">
+
+                    <label
+                        for="metodoPago"
+                        class="form-label">
+                        Método de Pago:
+                    </label>
+
+                    <select
+                        class="form-select"
+                        id="metodoPago">
+
+                        <option value="tarjeta">
+                            Tarjeta de Crédito
+                        </option>
+
+                        <option value="paypal">
+                            PayPal
+                        </option>
+
+                        <option value="cripto">
+                            Criptomonedas
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <p id="precioJuego"></p>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+                    Cancelar
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-success"
+                    onclick="confirmarCompra()">
+                    Confirmar Compra
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     CANVAS DE CANVA
+========================== -->
+
+<div class="carousel">
+
+    <div
+        style="
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%;
+        box-shadow: 0 2px 8px rgba(0,255,0,0.2);
+        overflow: hidden;
+        border-radius: 8px;
+        ">
+
+        <iframe
+            loading="lazy"
+            style="
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+            "
+            src="https://www.canva.com/design/DAGR4LuSARU/emsX0Sd-x3OAuGe2lHzqXA/view?embed"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+    <a
+        href="https://www.canva.com/design/DAGR4LuSARU/emsX0Sd-x3OAuGe2lHzqXA/view"
+        target="_blank">
+        productsweb.com
+    </a>
+
+    de Valentin Harrison
+
+</div>
+
+
+<!-- =========================
+     BOOTSTRAP JS
+========================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- =========================
+     FONDO MATRIX
+========================== -->
+<!-- =========================
+     SISTEMA DE COMPRA
+========================== -->
+    <script src="script.js"></script>
+</body>
+</html>
